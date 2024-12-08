@@ -11,6 +11,9 @@ export default {
       fontFamily: {
         logo: ["var(--font-logo)", "sans-serif"],
       },
+      colors: {
+        borderRed: "#8C1D0F", // Cor da borda do texto
+      },
     },
   },
   plugins: [],

@@ -1,27 +1,40 @@
+import Link from "next/link";
+
 export function Header() {
   return (
     <header className="flex justify-between items-end">
-      <div className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2">
         <img src="/logo.svg" alt="logo" className="w-14 h-14" />
-        <div className=" flex flex-col font-logo text-red-900 items-end">
-          <h1 className="text-4xl">Confraria crista</h1>
-          <p className="text-xs uppercase">setúbal</p>
+        <div className="flex flex-col font-logo text-[#C53522] items-end relative">
+          <h1
+            className="relative text-4xl text-[#C53522] before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:text-borderRed before:-z-10 before:translate-x-1 before:translate-y-1"
+            data-text="Confraria crista"
+          >
+            Confraria crista
+          </h1>
+
+          <p
+            className="relative text-xs uppercase text-[#C53522] before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:text-borderRed before:-z-10 before:translate-x-1 before:translate-y-1"
+            data-text="setúbal"
+          >
+            setúbal
+          </p>
         </div>
-      </div>
+      </Link>
       <nav>
         <ul className="flex gap-4 font-medium">
           <li>
-            <a href="">Home</a>
+            <Link href="/aboutus">Sobre nos</Link>
           </li>
           <li>
-            <a href="">Sobre nos</a>
+            <Link href="/whatwedo">O que fazemos</Link>
           </li>
           <li>
-            <a href="">O que fazemos</a>
+            <Link href="/getinvolved">Participe</Link>
           </li>
           <div className="h-6 w-px bg-neutral-900"></div>
           <li>
-            <a href="">Participe</a>
+            <Link href="/signup">Sign Up</Link>
           </li>
         </ul>
       </nav>

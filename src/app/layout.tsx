@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${mainFont.variable} ${subFont.variable}`}>
       <body
-        className={`${mainFont.className} bg-orange-100 text-neutral-900 px-16 py-4 antialiased`}
+        className={`${mainFont.className} text-neutral-900 antialiased`}
       >
         {children}
       </body>
