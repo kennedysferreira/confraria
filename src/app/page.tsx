@@ -9,7 +9,7 @@ export default function Home() {
       <main className="space-y-40 mt-40">
         <section className="space-y-10">
           <div className="flex gap-20 justify-between">
-            <h1 className="text-[84px] font-semibold">Fortalecendo a fé e compartilhando o amor de Cristo.</h1>
+            <h1 className="text-[84px] tracking-tight leading-tight font-semibold">Fortalecendo a fé e compartilhando o amor de Cristo.</h1>
             <aside className="flex flex-col items-end justify-between">
               <button className="bg-red-900 px-8 py-5 rounded text-white">Button</button>
               <p className="text-lg w-80">

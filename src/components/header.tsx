@@ -23,18 +23,24 @@ export function Header() {
       </Link>
       <nav>
         <ul className="flex gap-4 font-medium">
-          <li>
-            <Link href="/aboutus">Sobre nos</Link>
+          <li className="group">
+            <Link href="/aboutus" >
+              Sobre nós
+            </Link>
+            <div className="h-px bg-neutral-900 w-0 group-hover:w-full transition-all duration-300"/>
           </li>
-          <li>
+          <li className="group">
             <Link href="/whatwedo">O que fazemos</Link>
+            <div className="h-px bg-neutral-900 w-0 group-hover:w-full transition-all duration-300"/>
           </li>
-          <li>
+          <li className="group">
             <Link href="/getinvolved">Participe</Link>
+            <div className="h-px bg-neutral-900 w-0 group-hover:w-full transition-all duration-300"/>
           </li>
           <div className="h-6 w-px bg-neutral-900"></div>
-          <li>
+          <li className="group">
             <Link href="/signup">Sign Up</Link>
+            <div className="h-px bg-neutral-900 w-0 group-hover:w-full transition-all duration-300"/>
           </li>
         </ul>
       </nav>
