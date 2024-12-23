@@ -1,10 +1,12 @@
-import { Card } from "@/components/card";
+import { Carousel } from "@/components/carousel";
 import { Description } from "@/components/description";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MainTitle } from "@/components/mainTitle";
 
 export default function WhatWeDo() {
+  const colorsWhatWeDo = ["bg-[#9ABEB1]", "bg-[#CFA4D5]", "bg-[#90F9A3]"];
+
   const data = [
     {
       title: "Amor ao próximo e compaixão",
@@ -24,10 +26,16 @@ export default function WhatWeDo() {
       content:
         "Acreditamos no valor do serviço ao próximo, com humildade e coração dedicado a ajudar.",
     },
+    {
+      title: "Fé e esperança",
+      subtitle: "Hb 11.1",
+      content:
+        "Cremos no poder da fé para transformar vidas e trazer esperança nos momentos mais difíceis.",
+    },
   ];
 
   return (
-    <div className="space-y-40 bg-[#161E42] px-16 py-4 text-white">
+    <div className="space-y-40 bg-[#161E42] px-16 pt-4 text-white">
       <Header />
       <main className="space-y-40">
         <MainTitle title={"O que fazemos"} />
@@ -50,32 +58,14 @@ export default function WhatWeDo() {
         </section>
 
         <section>
-          <div className="flex items-center justify-between">
-            <h1 className="text-[68px] font-semibold">Principais Direçoes</h1>
-            <div className="flex flex-wrap gap-1">
-              <button>
-                <img src="/carouselSwitchBack.svg" alt="" />
-              </button>
-              <button>
-                <img src="/carouselSwitchNext.svg" alt="" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex gap-10 items-start overflow-hidden mr-[-64px]">
-            
-              {data.map((item, index) => (
-                <Card
-                  key={index}
-                  title={item.title}
-                  subTitle={item.subtitle}
-                  content={item.content}
-                />
-              ))}
-            
-
-            
-          </div>
+            <Carousel
+            cards={data.map((item) => ({
+              title: item.title,
+              subTitle: item.subtitle,
+              content: item.content,
+            }))}
+            colors={colorsWhatWeDo} carouselTitle={"Principais Direções"}            />
+          
         </section>
       </main>
       <Footer />

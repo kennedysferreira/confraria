@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 
 export default function Home() {
   return (
-    <div className="px-16 py-4 bg-orange-100">
+    <div className="px-16 pt-4 bg-orange-100">
       <Header /> 
       <main className="space-y-40 mt-40">
         <section className="space-y-10">

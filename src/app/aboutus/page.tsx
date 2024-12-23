@@ -1,14 +1,17 @@
+import { Carousel } from "@/components/carousel";
 import { Description } from "@/components/description";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MainTitle } from "@/components/mainTitle";
+import { title } from "process";
 
 export default function AboutUs() {
+  const colorsAboutUs = ["bg-[#B7D0FF]", "bg-[#F7C7B4]", "bg-[#89D299]"];
   return (
-    <div className="space-y-40 bg-[#1B4040] px-16 py-4 text-white"> 
+    <div className="space-y-40 bg-[#1B4040] px-16 pt-4 text-white">
       <Header />
       <main className="space-y-40">
-        <MainTitle title={"Sobre Nos"}/>
+        <MainTitle title={"Sobre Nos"} />
         <Description
           title="Visão"
           description={
@@ -37,10 +40,33 @@ export default function AboutUs() {
             </>
           }
         />
+        <section>
+          <Carousel
+            cards={[
+              {
+                title: "Amor ao proximo e compaixao",
+                subTitle: "João 3.18",
+                content: "Filhinhos, não amemos de palavra nem de língua, mas de fato e de verdade",
+              },
+              {
+                title: "Compromisso com a Verdade Bíblica",
+                subTitle: " I Jo 5.20",
+                content: "E sabemos que já o Filho de Deus é vindo, e nos deu entendimento para que conheçamos ao Verdadeiro; e no que é verdadeiro estamos, isto é, em seu Filho Jesus Cristo. Este é o verdadeiro Deus e a vida eterna",
+              },
+              {
+                title: "Amor ao proximo e compaixao",
+                subTitle: "João 3.18",
+                content: "Filhinhos, não amemos de palavra nem de língua, mas de fato e de verdade",
+              },
+            ]}
+            colors={colorsAboutUs} carouselTitle={"Valores"}          />
+        </section>
         <section className="flex gap-40">
           <img src="/artAboutUs.png" alt="" />
           <div className="space-y-10">
-            <h1 className="font-semibold text-[68px] leading-none">Nossa Inspiração</h1>
+            <h1 className="font-semibold text-[68px] leading-none">
+              Nossa Inspiração
+            </h1>
             <div className="space-y-6 text-[22px]">
               <p>
                 Somos uma Confraria Cristã Bíblica, sem fim lucrativos, onde se
@@ -65,7 +91,7 @@ export default function AboutUs() {
           </div>
         </section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
