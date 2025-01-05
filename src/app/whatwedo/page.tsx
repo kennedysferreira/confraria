@@ -3,6 +3,7 @@ import { Description } from "@/components/description";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MainTitle } from "@/components/mainTitle";
+import { UpcommingEvents } from "@/components/upcommingEvents";
 
 export default function WhatWeDo() {
   const colorsWhatWeDo = ["bg-[#9ABEB1]", "bg-[#CFA4D5]", "bg-[#90F9A3]"];
@@ -58,14 +59,32 @@ export default function WhatWeDo() {
         </section>
 
         <section>
-            <Carousel
+          <Carousel
             cards={data.map((item) => ({
               title: item.title,
               subTitle: item.subtitle,
               content: item.content,
             }))}
-            colors={colorsWhatWeDo} carouselTitle={"Principais Direções"}            />
-          
+            colors={colorsWhatWeDo}
+            carouselTitle={"Principais Direções"}
+          />
+        </section>
+
+        <section className="flex flex-col gap-10">
+          <h1 className="text-[68px] font-semibold">Proximos eventos</h1>
+          <UpcommingEvents
+            title={"Proximos eventos"}
+            data={"25 de Dezembro"}
+            location={"Setubal"}
+            content="Em um típico domingo à tarde, a pequena comunidade se reúne ao redor do campo de futebol local, criando um cenário vibrante e cheio de energia. Amigos, familiares e vizinhos ocupam as arquibancadas improvisadas, trazendo cadeiras, bandeiras e, claro, muita empolgação. O jogo, embora amistoso, é levado a sério pelos jogadores amadores que vestem as cores de seus bairros com orgulho."
+          />
+          <UpcommingEvents
+            title={"Proximos eventos"}
+            data={"25 de Dezembro"}
+            location={"Setubal"}
+            content="Em um típico domingo à tarde, a pequena comunidade se reúne ao redor do campo de futebol local, criando um cenário vibrante e cheio de energia. Amigos, familiares e vizinhos ocupam as arquibancadas improvisadas, trazendo cadeiras, bandeiras e, claro, muita empolgação. O jogo, embora amistoso, é levado a sério pelos jogadores amadores que vestem as cores de seus bairros com orgulho."
+          />
+          <button className="text-2xl py-5 px-8 bg-white text-neutral-900 rounded self-end">See More</button>
         </section>
       </main>
       <Footer />

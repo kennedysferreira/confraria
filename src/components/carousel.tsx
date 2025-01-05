@@ -16,27 +16,16 @@ export function Carousel({
   cards: CardProps[];
   colors: string[];
 }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? cards.length - 1 : prevIndex - 1
-    );
-  };
 
   return (
     <div>
       <div className="flex items-center justify-between mb-5">
         <h1 className="text-[68px] font-semibold">{carouselTitle}</h1>
         <div className="flex gap-2">
-          <button onClick={handlePrev}>
+          <button >
             <img src="/carouselSwitchBack.svg" alt="Anterior" />
           </button>
-          <button onClick={handleNext}>
+          <button >
             <img src="/carouselSwitchNext.svg" alt="Próximo" />
           </button>
         </div>
@@ -45,9 +34,7 @@ export function Carousel({
       <div className="overflow-hidden mr-[-64px]">
         <div
           className={`flex gap-5 items-start transition-transform duration-500 ease-in-out`}
-          style={{
-            transform: `translateX(-${currentIndex * 36.25}rem)`,
-          }}
+          
         >
           {cards.map((card, index) => (
             <div
